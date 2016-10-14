@@ -1,5 +1,6 @@
 package com.android.sjq.wanandroid.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
@@ -13,7 +14,7 @@ import com.android.sjq.wanandroid.R;
 public class ClassifyViewHolder extends RecyclerView.ViewHolder {
     private TextView classifyName;
 
-    public ClassifyViewHolder(View view) {
+    public ClassifyViewHolder(Context context,View view) {
         super(view);
         classifyName = (TextView) view.findViewById(R.id.classify_name_tv);
     }

@@ -25,7 +25,7 @@ public class ClassifyAdapter extends RecyclerView.Adapter<ClassifyViewHolder> {
 
     @Override
     public ClassifyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        ClassifyViewHolder viewHolder = new ClassifyViewHolder(
+        ClassifyViewHolder viewHolder = new ClassifyViewHolder(mContext,
                 LayoutInflater.from(mContext).inflate(R.layout.classify_item_layout, null));
         return viewHolder;
     }
