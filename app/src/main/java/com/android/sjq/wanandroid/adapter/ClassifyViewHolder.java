@@ -26,4 +26,6 @@ public class ClassifyViewHolder extends RecyclerView.ViewHolder {
     public void setClassifyName(TextView classifyName) {
         this.classifyName = classifyName;
     }
+
+
 }

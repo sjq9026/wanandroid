@@ -3,6 +3,7 @@ package com.android.sjq.wanandroid.adapter;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.android.sjq.wanandroid.R;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 public class ClassifyAdapter extends RecyclerView.Adapter<ClassifyViewHolder> {
     private Context mContext;
     private ArrayList<ClassifyEntity> mlist;
+    private OnClassifyItemClickListener listener;
 
     public ClassifyAdapter(Context mContext, ArrayList<ClassifyEntity> mlist) {
         this.mContext = mContext;
@@ -31,12 +33,22 @@ public class ClassifyAdapter extends RecyclerView.Adapter<ClassifyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ClassifyViewHolder holder, int position) {
+    public void onBindViewHolder(final ClassifyViewHolder holder, int position) {
         holder.getClassifyName().setText(mlist.get(position).getClassifyName());
+        holder.getClassifyName().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(holder.getLayoutPosition(),holder);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return mlist.size();
+    }
+
+    public void setOnItemClickListener(OnClassifyItemClickListener listener) {
+        this.listener = listener;
     }
 }
