@@ -26,7 +26,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
+//首页Fragment
 public class HomeFragment extends Fragment implements OnItemClickListener {
     private RecyclerView recently_blog_rv;
     private ArrayList<RecentlyBlogInfoEntity> mRecentlyBlogs;

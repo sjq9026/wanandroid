@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.android.sjq.wanandroid.R;
 
+//项目常用框架Fragment
 public class FrameworkFragment extends Fragment {
 
     public FrameworkFragment() {

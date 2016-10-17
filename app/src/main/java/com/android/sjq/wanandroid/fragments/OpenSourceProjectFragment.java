@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.android.sjq.wanandroid.R;
-
+//开源项目Fragment
 public class OpenSourceProjectFragment extends Fragment {
 
     public OpenSourceProjectFragment() {

@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.android.sjq.wanandroid.R;
-
+//热门专题Fragment
 public class PopularTopicsFragment extends Fragment {
 
     public PopularTopicsFragment() {

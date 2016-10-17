@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.android.sjq.wanandroid.R;
-
+//新技术Fragment
 public class NewTechnologyFragment extends Fragment {
 
     public NewTechnologyFragment() {

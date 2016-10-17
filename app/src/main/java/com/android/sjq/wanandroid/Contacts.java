@@ -6,6 +6,7 @@ package com.android.sjq.wanandroid;
 
 public class Contacts {
     public static final String BASE_URL = "http://www.xueandroid.com/";
+    public static final String KNOW_SYSTEM = "http://www.xueandroid.com/hierarchy?courseId=13";
     public static final String HOME = "首页";
     public static final String KNOWLEDGE_SYSTEM = "知识体系";
     public static final String POPULAR_TOPICS = "热门专题";

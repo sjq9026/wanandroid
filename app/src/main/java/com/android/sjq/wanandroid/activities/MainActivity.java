@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements OnClassifyItemCli
                 transaction.add(R.id.content_layout, homeFragment, flags[0]);
                 transaction.commit();
             }
-
             currentFragment = homeFragment;
         }
     }
@@ -69,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements OnClassifyItemCli
     private void initData() {
         //获取分类数据
         initClassifiesData();
-
     }
 
 
