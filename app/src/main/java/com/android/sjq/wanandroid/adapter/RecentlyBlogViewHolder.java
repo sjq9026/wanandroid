@@ -13,12 +13,12 @@ import com.android.sjq.wanandroid.R;
  */
 
 public class RecentlyBlogViewHolder extends RecyclerView.ViewHolder {
-    private TextView blog_name_tv;
-    private TextView classify_name_tv;
-    private TextView author_name_tv;
-    private TextView source_tv;
-    private TextView date_tv;
-    private LinearLayout layout;
+    public TextView blog_name_tv;
+    public TextView classify_name_tv;
+    public TextView author_name_tv;
+    public TextView source_tv;
+    public TextView date_tv;
+    public LinearLayout layout;
 
 
     public RecentlyBlogViewHolder(Context context,View itemView) {
@@ -31,51 +31,51 @@ public class RecentlyBlogViewHolder extends RecyclerView.ViewHolder {
         layout = (LinearLayout)itemView.findViewById(R.id.content_layout);
     }
 
-    public TextView getBlog_name_tv() {
-        return blog_name_tv;
-    }
-
-    public void setBlog_name_tv(TextView blog_name_tv) {
-        this.blog_name_tv = blog_name_tv;
-    }
-
-    public TextView getClassify_name_tv() {
-        return classify_name_tv;
-    }
-
-    public void setClassify_name_tv(TextView classify_name_tv) {
-        this.classify_name_tv = classify_name_tv;
-    }
-
-    public TextView getAuthor_name_tv() {
-        return author_name_tv;
-    }
-
-    public void setAuthor_name_tv(TextView author_name_tv) {
-        this.author_name_tv = author_name_tv;
-    }
-
-    public TextView getSource_tv() {
-        return source_tv;
-    }
-
-    public void setSource_tv(TextView source_tv) {
-        this.source_tv = source_tv;
-    }
-
-    public TextView getDate_tv() {
-        return date_tv;
-    }
-
-    public void setDate_tv(TextView date_tv) {
-        this.date_tv = date_tv;
-    }
-
-    public LinearLayout getLayout() {
-        return layout;
-    }
-
-    public void setLayout(LinearLayout layout) {
-        this.layout = layout;
-    }
+//    public TextView getBlog_name_tv() {
+//        return blog_name_tv;
+//    }
+//
+//    public void setBlog_name_tv(TextView blog_name_tv) {
+//        this.blog_name_tv = blog_name_tv;
+//    }
+//
+//    public TextView getClassify_name_tv() {
+//        return classify_name_tv;
+//    }
+//
+//    public void setClassify_name_tv(TextView classify_name_tv) {
+//        this.classify_name_tv = classify_name_tv;
+//    }
+//
+//    public TextView getAuthor_name_tv() {
+//        return author_name_tv;
+//    }
+//
+//    public void setAuthor_name_tv(TextView author_name_tv) {
+//        this.author_name_tv = author_name_tv;
+//    }
+//
+//    public TextView getSource_tv() {
+//        return source_tv;
+//    }
+//
+//    public void setSource_tv(TextView source_tv) {
+//        this.source_tv = source_tv;
+//    }
+//
+//    public TextView getDate_tv() {
+//        return date_tv;
+//    }
+//
+//    public void setDate_tv(TextView date_tv) {
+//        this.date_tv = date_tv;
+//    }
+//
+//    public LinearLayout getLayout() {
+//        return layout;
+//    }
+//
+//    public void setLayout(LinearLayout layout) {
+//        this.layout = layout;
+//    }
 }

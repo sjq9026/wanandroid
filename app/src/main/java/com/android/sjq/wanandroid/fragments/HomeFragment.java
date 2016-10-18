@@ -132,7 +132,8 @@ public class HomeFragment extends Fragment implements OnItemClickListener {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
-                RecentlyBlogAdapter adapter = new RecentlyBlogAdapter(getActivity(), mRecentlyBlogs);
+                RecentlyBlogAdapter adapter =
+                        new RecentlyBlogAdapter(getActivity(), mRecentlyBlogs);
                 adapter.setOnItemClickListener(HomeFragment.this);
                 recently_blog_rv.setAdapter(adapter);
             }

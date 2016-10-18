@@ -24,4 +24,12 @@ public class SubClassEntity {
     public void setSubClassUrl(String subClassUrl) {
         SubClassUrl = subClassUrl;
     }
+
+    @Override
+    public String toString() {
+        return "SubClassEntity{" +
+                "SubClassName='" + SubClassName + '\'' +
+                ", SubClassUrl='" + SubClassUrl + '\'' +
+                '}';
+    }
 }

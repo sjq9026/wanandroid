@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.android.sjq.wanandroid.R;
 import com.android.sjq.wanandroid.entity.RecentlyBlogInfoEntity;
+import com.android.sjq.wanandroid.tool.Log;
 
 import java.util.ArrayList;
 
@@ -22,9 +23,9 @@ public class RecentlyBlogAdapter extends RecyclerView.Adapter<RecentlyBlogViewHo
     private OnItemClickListener listener;
 
     public RecentlyBlogAdapter(Context context, ArrayList<RecentlyBlogInfoEntity> list) {
-        mContext = context;
-        mList = list;
-        mInflater = LayoutInflater.from(mContext);
+        this.mContext = context;
+        this.mList = list;
+        this.mInflater = LayoutInflater.from(mContext);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -33,37 +34,52 @@ public class RecentlyBlogAdapter extends RecyclerView.Adapter<RecentlyBlogViewHo
 
     @Override
     public RecentlyBlogViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new RecentlyBlogViewHolder(mContext,mInflater.inflate(R.layout.recently_blog_item_layout, null));
+        android.util.Log.i("RecyclerView", "onCreateViewHolder: ");
+        RecentlyBlogViewHolder viewholder = new RecentlyBlogViewHolder(mContext,
+                mInflater.inflate(R.layout.recently_blog_item_layout, null));
+        return viewholder;
     }
 
     @Override
-    public void onBindViewHolder(final RecentlyBlogViewHolder holder, final int position) {
+    public void onBindViewHolder(RecentlyBlogViewHolder holder, final int position) {
+        android.util.Log.i("RecyclerView", "onBindViewHolder: ");
         if (position == 0) {
-            holder.getBlog_name_tv().setPadding(20, 20, 0, 0);
-            holder.getClassify_name_tv().setPadding(20, 20, 0, 0);
+            holder.blog_name_tv.setPadding(20, 20, 0, 0);
+            holder.classify_name_tv.setPadding(20, 20, 0, 0);
         }
-        holder.getLayout().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listener.onBlogNameClickListener(holder.getLayoutPosition());
-            }
-        });
-        holder.getClassify_name_tv().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listener.onClassifyNameClickListener(holder.getLayoutPosition());
-            }
-        });
+        final RecentlyBlogViewHolder finalHoler = holder;
         RecentlyBlogInfoEntity entity = mList.get(position);
-        holder.getBlog_name_tv().setText(entity.getBlogname());
-        holder.getClassify_name_tv().setText(entity.getClassify());
-        holder.getAuthor_name_tv().setText(entity.getAuthor());
-        holder.getSource_tv().setText(entity.getSource());
-        holder.getDate_tv().setText(entity.getDate());
+        holder.blog_name_tv.setText(entity.getBlogname());
+        Log.print("blogName", entity.getBlogname());
+        if (entity.getClassify() == null) {
+            holder.classify_name_tv.setVisibility(View.GONE);
+        }
+
+        holder.author_name_tv.setText(entity.getAuthor());
+        holder.source_tv.setText(entity.getSource());
+        holder.date_tv.setText(entity.getDate());
+
+        holder.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onBlogNameClickListener(finalHoler.getLayoutPosition());
+                }
+            }
+        });
+        holder.classify_name_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onClassifyNameClickListener(finalHoler.getLayoutPosition());
+                }
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
+        Log.print("ItemCount","ItemCount----->"+mList.size()+"");
         return mList.size();
     }
 }

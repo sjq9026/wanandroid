@@ -25,4 +25,12 @@ public class LeaderEntity {
     public void setSubClassEntities(ArrayList<SubClassEntity> subClassEntities) {
         this.subClassEntities = subClassEntities;
     }
+
+    @Override
+    public String toString() {
+        return "LeaderEntity{" +
+                "LeaderName='" + LeaderName + '\'' +
+                ", subClassEntities=" + subClassEntities +
+                '}';
+    }
 }

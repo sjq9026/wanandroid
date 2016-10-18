@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.android.sjq.wanandroid.R;
 import com.android.sjq.wanandroid.entity.ClassifyEntity;
+import com.android.sjq.wanandroid.tool.Log;
 
 import java.util.ArrayList;
 
@@ -45,6 +46,7 @@ public class ClassifyAdapter extends RecyclerView.Adapter<ClassifyViewHolder> {
 
     @Override
     public int getItemCount() {
+
         return mlist.size();
     }
 
